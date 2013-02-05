@@ -35,11 +35,10 @@
                 var cleanPath = decodeURI(document.location.pathname).replace(/^\/+/, '').replace(/\/+$/, '');
 
                 var path = '/';
-                var crumbs = [{text: 'Home', type: 'home', link: '/'}];
-
-                $(cleanPath.split(/\/+/)).each(function() {
+                var crumbs = [];
+                $(cleanPath.split(/\/+/)).each(function(i, value) {
                     path += this + '/';
-                    crumbs.push({text: this, type: 'folder', link: path});
+                    crumbs.push({text: value, type: (i == 0 ? 'home' : 'folder'), link: path});
                 });
 
                 var lastCrumb = crumbs.pop();
