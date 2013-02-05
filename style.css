@@ -41,6 +41,13 @@ body {
     margin: 0 auto 0 auto;
 }
 
+.schild {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: url('/index/images/schild.png') no-repeat;
+}
+
 
 /* ---[ generic ]-------------------------------------------------------------------------------------------- */
 
