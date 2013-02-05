@@ -41,15 +41,15 @@
                     path += this + '/';
                     crumbs.push({text: value, type: (i == 0 ? 'home' : 'folder'), link: path});
                 });
-
                 var lastCrumb = crumbs.pop();
+
+                document.title = 'Files\u2014' + crumb[0].text;
 
                 $(crumbs).each(function() {
                     $('#breadcrumb').append('<a href="' + this.link + '" class="' + this.type + '">' + this.text + '</a><span class="separator">&raquo;</span>');
                 });
 
                 $('#breadcrumb').append('<span class="' + lastCrumb.type + '">' + lastCrumb.text + '</span>');
-                document.title = 'Files&mdash;' + lastCrumb.text;
 
                 $('table').remove();
             });
