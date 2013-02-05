@@ -20,7 +20,7 @@
                     if (fileType == 'folder' && columns.eq(1).html().match(/parent directory/i))
                         fileType = 'back';
 
-                    var rowHtml  = '<div class="file ' + fileType + '"><div id="name">' + columns.eq(1).html() + '</div><div id="size">' + columns.eq(3).html() + '</div><div id="date">' + columns.eq(2).html() + '</div></div>';
+                    var rowHtml  = '<div class="file ' + fileType + '"><div class="name">' + columns.eq(1).html() + '</div><div class="size">' + (columns.eq(3).html() == '-' ? '' : columns.eq(3).html()) + '</div><div class="date">' + columns.eq(2).html() + '</div></div>';
 
                     $(rowHtml)
                         .appendTo('#files')
@@ -60,10 +60,10 @@
             <h1 id="breadcrumb"></h1>
             <div id="files">
                 <div class="header">
-                    <div id="icon"></div>
-                    <div id="name">Name</div>
-                    <div id="size">Size</div>
-                    <div id="date">Modified</div>
+                    <div class="icon"></div>
+                    <div class="name">Name</div>
+                    <div class="size">Size</div>
+                    <div class="date">Modified</div>
                 </div>
             </div>
 

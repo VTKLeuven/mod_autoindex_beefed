@@ -131,23 +131,26 @@ h1 .separator {
     border: 1px solid rgb(198, 216, 223);
 }
 
-#files #name {
+#files .name {
     display: inline-block;
-    width: 292px;
+    width: 317px;
+    max-width: 317px;
+    white-space: nowrap;
+    overflow-x: hidden;
 }
 
-#files #size {
+#files .size {
     display: inline-block;
-    width: 100px;
+    width: 75px;
     text-align: right;
-    padding: 0 0 0 3px;
+    margin-left: 3px;
 }
 
-#files #date {
+#files .date {
     display: inline-block;
     width: 148px;
     text-align: right;
-    padding: 0 0 0 3px;
+    margin-left: 3px;
 }
 
 
