@@ -49,6 +49,7 @@
                 });
 
                 $('#breadcrumb').append('<span class="' + lastCrumb.type + '">' + lastCrumb.text + '</span>');
+                document.title = 'Files&mdash;' + lastCrumb;
 
                 $('table').remove();
             });
