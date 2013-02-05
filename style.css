@@ -61,7 +61,7 @@ a:hover {
 /* ---[ breadcrumb ]----------------------------------------------------------------------------------------- */
 
 h1 {
-  padding: 18px 24px;
+  padding: 0 24px;
   font-weight: bold;
   font-size: 13px;
   line-height: 26px;
@@ -72,12 +72,12 @@ h1 {
 
 h1 .home {
   padding: 0 4px 0 24px;
-  background: url('/.index/images/home.png') no-repeat 4px center;
+  background: url('/index/images/home.png') no-repeat 4px center;
 }
 
 h1 .folder {
   padding: 0 4px 0 24px;
-  background: url('/.index/images/folder.png') no-repeat 4px center;
+  background: url('/index/images/folder.png') no-repeat 4px center;
 }
 
 h1 .separator {
@@ -93,7 +93,7 @@ h1 .separator {
 
 #files .header,
 #files .file {
-  padding: 8px 8px 8px 30px;
+  padding: 8px;
   border: 1px solid rgb(255, 255, 255);
 }
 
@@ -141,15 +141,15 @@ h1 .separator {
 /* ---[ file types ]----------------------------------------------------------------------------------------- */
 
 .file {
-  background: url('/.index/images/unknown.png') no-repeat 8px center;
+  background: url('/index/images/unknown.png') no-repeat 8px center;
 }
 
 .file.back {
-  background: url('/.index/images/back.png') no-repeat 8px center;
+  background: url('/index/images/back.png') no-repeat 8px center;
 }
 
 .file.folder {
-  background: url('/.index/images/folder.png') no-repeat 8px center;
+  background: url('/index/images/folder.png') no-repeat 8px center;
 }
 
 .file._gz,
@@ -158,38 +158,38 @@ h1 .separator {
 .file._bz2,
 .file._rar,
 .file._7z {
-  background: url('/.index/images/compressed.png') no-repeat 8px center;
+  background: url('/index/images/compressed.png') no-repeat 8px center;
 }
 
 .file._gif,
 .file._png,
 .file._jpg {
-  background: url('/.index/images/image.png') no-repeat 8px center;
+  background: url('/index/images/image.png') no-repeat 8px center;
 }
 
 .file._avi,
 .file._mov,
 .file._mp4 {
-  background: url('/.index/images/movie.png') no-repeat 8px center;
+  background: url('/index/images/movie.png') no-repeat 8px center;
 }
 
 .file._wav,
 .file._mp3,
 .file._m4a,
 .file._ogg {
-  background: url('/.index/images/sound.png') no-repeat 8px center;
+  background: url('/index/images/sound.png') no-repeat 8px center;
 }
 
 .file._txt,
 .file._pages {
-  background: url('/.index/images/text.png') no-repeat 8px center;
+  background: url('/index/images/text.png') no-repeat 8px center;
 }
 
 .file._doc,
 .file._docx {
-  background: url('/.index/images/word.png') no-repeat 8px center;
+  background: url('/index/images/word.png') no-repeat 8px center;
 }
 
 .file._pdf {
-  background: url('/.index/images/pdf.png') no-repeat 8px center;
+  background: url('/index/images/pdf.png') no-repeat 8px center;
 }
