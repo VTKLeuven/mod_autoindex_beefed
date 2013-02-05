@@ -14,7 +14,7 @@
                     var columns = $(this).find('td');
 
                     if (columns.eq(0).find('img').attr('alt') == '[DIR]' && columns.eq(1).find('a').attr('href') == '/')
-                        continue;
+                        return true;
 
                     var fileType = columns.eq(0).find('img').attr('alt') == '[DIR]') ? 'folder' : '_' + columns.eq(1).find('a').html().split('.').pop().toLowerCase();
                     var rowHtml  = '<div class="file ' + filetype + '"><div id="name">' + columns.eq(1).html() + '</div><div id="size">' + columns.eq(3).html() + '</div><div id="date">' + columns.eq(2).html() + '</div></div>';
@@ -62,5 +62,5 @@
                     <div id="date">Modified</div>
                 </div>
             </div>
-            <div style="display:none">
+            <div style="display: none;">
 
