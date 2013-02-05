@@ -16,9 +16,10 @@
                     if (columns.eq(0).find('img').attr('alt') == '[DIR]' && columns.eq(1).find('a').attr('href') == '/')
                         return true;
 
-                    console.log(columns.eq(1).html());
-
                     var fileType = columns.eq(0).find('img').attr('alt') == '[DIR]' ? 'folder' : '_' + columns.eq(1).find('a').html().split('.').pop().toLowerCase();
+                    if (fileType == 'folder' && columns.eq(1).html().match(/parent directory/i))
+                        fileType = 'back';
+
                     var rowHtml  = '<div class="file ' + fileType + '"><div id="name">' + columns.eq(1).html() + '</div><div id="size">' + columns.eq(3).html() + '</div><div id="date">' + columns.eq(2).html() + '</div></div>';
 
                     $(rowHtml)
