@@ -16,8 +16,10 @@
                     if (columns.eq(0).find('img').attr('alt') == '[DIR]' && columns.eq(1).find('a').attr('href') == '/')
                         return true;
 
-                    var fileType = columns.eq(0).find('img').attr('alt') == '[DIR]') ? 'folder' : '_' + columns.eq(1).find('a').html().split('.').pop().toLowerCase();
-                    var rowHtml  = '<div class="file ' + filetype + '"><div id="name">' + columns.eq(1).html() + '</div><div id="size">' + columns.eq(3).html() + '</div><div id="date">' + columns.eq(2).html() + '</div></div>';
+                    console.log(columns.eq(1).html());
+
+                    var fileType = columns.eq(0).find('img').attr('alt') == '[DIR]' ? 'folder' : '_' + columns.eq(1).find('a').html().split('.').pop().toLowerCase();
+                    var rowHtml  = '<div class="file ' + fileType + '"><div id="name">' + columns.eq(1).html() + '</div><div id="size">' + columns.eq(3).html() + '</div><div id="date">' + columns.eq(2).html() + '</div></div>';
 
                     $(rowHtml)
                         .appendTo('#files')
@@ -46,7 +48,7 @@
                     $('#breadcrumb').append('<a href="' + this.link + '" class="' + this.type + '">' + this.text + '</a><span class="separator">&raquo;</span>');
                 });
 
-                $('#breadcrumb').append('<span class="' + last_crumb.type + '">' + last_crumb.text + '</span>');
+                $('#breadcrumb').append('<span class="' + lastCrumb.type + '">' + lastCrumb.text + '</span>');
             });
         </script>
     </head>
