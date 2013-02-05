@@ -43,7 +43,7 @@
                 });
                 var lastCrumb = crumbs.pop();
 
-                document.title = 'Files\u2014' + crumbs[0].text;
+                document.title = 'Files\u2014' + crumbs[crumbs.length - 1].text;
 
                 $(crumbs).each(function() {
                     $('#breadcrumb').append('<a href="' + this.link + '" class="' + this.type + '">' + this.text + '</a><span class="separator">&raquo;</span>');
